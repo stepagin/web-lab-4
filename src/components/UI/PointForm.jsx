@@ -15,6 +15,8 @@ const PointForm = ({setInputR, setInputX, setInputY, submit, clear}) => {
             case "Y":
                 setInputY(parseFloat(e.target.value));
                 break;
+            default:
+                break;
         }
     }
 

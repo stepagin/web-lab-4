@@ -12,20 +12,23 @@ const MainPage = () => {
     const [nowId, setNowId] = useState(0);
     const [lastHit, setLastHit] = useState(null);
 
+
     useEffect(() => {
         console.log("Обращение к серверу за списком точек...");
-        fetchPoints().then(data => {
+        fetchPoints();
+    }, [])
+
+    function fetchPoints() {
+        const p = PointService.getAll();
+        p.then(data => {
             setPoints(data);
             console.log(`Получено точек: ${data.length}`);
         })
             .catch(() => {
-                console.log("Нет подключения к серверу");
+                console.log("Нет подключения к серверу.");
             });
-    }, [])
-
-    async function fetchPoints() {
-        return await PointService.getAll();
     }
+
     const submit = (e) => {
         e.preventDefault();
         setLastHit(checkHit(inputR, inputX, inputY));
@@ -37,7 +40,7 @@ const MainPage = () => {
         setNowId(nowId + 1);
         // const newPoint = {id: nowId, r: r, x: x, y: y, hit: checkHit(r, x, y)};
         sendPoint(r, x, y).then((p) => {
-            // console.log(`Successfully added point r=${r}, x=${x}, y=${y}`);
+            console.log(`Successfully added point r=${r}, x=${x}, y=${y}`);
             setPoints([...points, p]);
             return p;
         })
@@ -48,7 +51,7 @@ const MainPage = () => {
             return true;
         if (x > 0 && y > 0)
             return false;
-        if (x >= 0 && y <= 0 && y > x - r/2)
+        if (x >= 0 && y <= 0 && y > x - r / 2)
             return true;
         return -r / 2 <= x && x <= 0 && -r <= y && y <= 0;
 
@@ -61,8 +64,6 @@ const MainPage = () => {
     const clear = (e) => {
         e.preventDefault();
         PointService.clearAll().then(() => {
-            setPoints([]);
-            console.log("Таблица точек очищена.");
         });
     }
 

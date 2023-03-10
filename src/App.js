@@ -11,11 +11,12 @@ export default function App() {
     useState(() => {
         if(localStorage.getItem("web-lab-4-authorization") === "true")
             setLoggedIn(true);
+        console.log(process.env.PUBLIC_URL);
     })
 
     return (
         <AuthContext.Provider value={{loggedIn, setLoggedIn}}>
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Navbar/>
                 <AppRouter/>
             </BrowserRouter>

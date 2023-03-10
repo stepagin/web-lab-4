@@ -1,4 +1,5 @@
 import React from 'react';
+
 const PointsTable = ({points}) => {
     return (
         <div>
@@ -14,26 +15,23 @@ const PointsTable = ({points}) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {points.map((p) =>
-                        <tr key={p.id}>
-                            <td>{p.id}</td>
-                            <td>{p.r}</td>
-                            <td>{p.x}</td>
-                            <td>{p.y}</td>
-                            <td style={{color: `${p.hit ? "green" : "red"}`}}>
-                                {p.hit ? "yes" : "no"}
-                            </td>
-                            <td>{p.date}</td>
-                        </tr>
-                    )}
+                {points.map((p) =>
+                    <tr key={p.id}>
+                        <td>{p.id}</td>
+                        <td>{p.r}</td>
+                        <td>{p.x}</td>
+                        <td>{p.y}</td>
+                        <td style={{color: `${p.hit ? "green" : "red"}`}}>
+                            {p.hit ? "yes" : "no"}
+                        </td>
+                        <td>{p.date}</td>
+                    </tr>
+                )}
                 </tbody>
             </table>
         </div>
     );
 };
 
-PointsTable.propTypes = {
-
-};
 
 export default PointsTable;

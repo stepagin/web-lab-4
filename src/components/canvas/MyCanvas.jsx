@@ -26,8 +26,6 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
         graph.width = graphSize;
         graph.height = graphSize;
 
-
-
         initGraph(ctx, graph);
     });
 
@@ -48,68 +46,68 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
 
         // Ox
         ctx.beginPath();
-        ctx.moveTo(0, graphSize/2);
-        ctx.lineTo(graphSize, graphSize/2);
-        ctx.lineTo(graphSize - arrowBoxSize, graphSize/2 - arrowBoxSize / 2);
-        ctx.moveTo(graphSize, graphSize/2);
-        ctx.lineTo(graphSize - arrowBoxSize, graphSize/2 + arrowBoxSize / 2);
+        ctx.moveTo(0, graphSize / 2);
+        ctx.lineTo(graphSize, graphSize / 2);
+        ctx.lineTo(graphSize - arrowBoxSize, graphSize / 2 - arrowBoxSize / 2);
+        ctx.moveTo(graphSize, graphSize / 2);
+        ctx.lineTo(graphSize - arrowBoxSize, graphSize / 2 + arrowBoxSize / 2);
         ctx.stroke();
         ctx.closePath();
         //Oy
         ctx.beginPath();
-        ctx.moveTo(graphSize/2, graphSize);
-        ctx.lineTo(graphSize/2, 0);
-        ctx.lineTo(graphSize/2 - arrowBoxSize/2, arrowBoxSize);
-        ctx.moveTo(graphSize/2, 0);
-        ctx.lineTo(graphSize/2 + arrowBoxSize/2, arrowBoxSize);
+        ctx.moveTo(graphSize / 2, graphSize);
+        ctx.lineTo(graphSize / 2, 0);
+        ctx.lineTo(graphSize / 2 - arrowBoxSize / 2, arrowBoxSize);
+        ctx.moveTo(graphSize / 2, 0);
+        ctx.lineTo(graphSize / 2 + arrowBoxSize / 2, arrowBoxSize);
         ctx.stroke();
         ctx.closePath();
         // R - Ox
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 + graphSize*4/10, graphSize/2 + arrowBoxSize/2);
-        ctx.lineTo(graphSize/2 + graphSize*4/10, graphSize/2 - arrowBoxSize/2);
+        ctx.moveTo(graphSize / 2 + graphSize * 4 / 10, graphSize / 2 + arrowBoxSize / 2);
+        ctx.lineTo(graphSize / 2 + graphSize * 4 / 10, graphSize / 2 - arrowBoxSize / 2);
         ctx.stroke();
         ctx.closePath();
         // R/2 - Ox
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 + graphSize*2/10, graphSize/2 + arrowBoxSize/2);
-        ctx.lineTo(graphSize/2 + graphSize*2/10, graphSize/2 - arrowBoxSize/2);
+        ctx.moveTo(graphSize / 2 + graphSize * 2 / 10, graphSize / 2 + arrowBoxSize / 2);
+        ctx.lineTo(graphSize / 2 + graphSize * 2 / 10, graphSize / 2 - arrowBoxSize / 2);
         ctx.stroke();
         ctx.closePath();
         // -R/2 - Ox
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - graphSize*2/10, graphSize/2 + arrowBoxSize/2);
-        ctx.lineTo(graphSize/2 - graphSize*2/10, graphSize/2 - arrowBoxSize/2);
+        ctx.moveTo(graphSize / 2 - graphSize * 2 / 10, graphSize / 2 + arrowBoxSize / 2);
+        ctx.lineTo(graphSize / 2 - graphSize * 2 / 10, graphSize / 2 - arrowBoxSize / 2);
         ctx.stroke();
         ctx.closePath();
         // -R - Ox
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - graphSize*4/10, graphSize/2 + arrowBoxSize/2);
-        ctx.lineTo(graphSize/2 - graphSize*4/10, graphSize/2 - arrowBoxSize/2);
+        ctx.moveTo(graphSize / 2 - graphSize * 4 / 10, graphSize / 2 + arrowBoxSize / 2);
+        ctx.lineTo(graphSize / 2 - graphSize * 4 / 10, graphSize / 2 - arrowBoxSize / 2);
         ctx.stroke();
         ctx.closePath();
         // R - Oy
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - arrowBoxSize/2, graphSize/2 - graphSize*4/10);
-        ctx.lineTo(graphSize/2 + arrowBoxSize/2, graphSize/2 - graphSize*4/10);
+        ctx.moveTo(graphSize / 2 - arrowBoxSize / 2, graphSize / 2 - graphSize * 4 / 10);
+        ctx.lineTo(graphSize / 2 + arrowBoxSize / 2, graphSize / 2 - graphSize * 4 / 10);
         ctx.stroke();
         ctx.closePath();
         // R/2 - Oy
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - arrowBoxSize/2, graphSize/2 - graphSize*2/10);
-        ctx.lineTo(graphSize/2 + arrowBoxSize/2, graphSize/2 - graphSize*2/10);
+        ctx.moveTo(graphSize / 2 - arrowBoxSize / 2, graphSize / 2 - graphSize * 2 / 10);
+        ctx.lineTo(graphSize / 2 + arrowBoxSize / 2, graphSize / 2 - graphSize * 2 / 10);
         ctx.stroke();
         ctx.closePath();
         // -R/2 - Oy
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - arrowBoxSize/2, graphSize/2 + graphSize*2/10);
-        ctx.lineTo(graphSize/2 + arrowBoxSize/2, graphSize/2 + graphSize*2/10);
+        ctx.moveTo(graphSize / 2 - arrowBoxSize / 2, graphSize / 2 + graphSize * 2 / 10);
+        ctx.lineTo(graphSize / 2 + arrowBoxSize / 2, graphSize / 2 + graphSize * 2 / 10);
         ctx.stroke();
         ctx.closePath();
         // -R - Oy
         ctx.beginPath();
-        ctx.moveTo(graphSize/2 - arrowBoxSize/2, graphSize/2 + graphSize*4/10);
-        ctx.lineTo(graphSize/2 + arrowBoxSize/2, graphSize/2 + graphSize*4/10);
+        ctx.moveTo(graphSize / 2 - arrowBoxSize / 2, graphSize / 2 + graphSize * 4 / 10);
+        ctx.lineTo(graphSize / 2 + arrowBoxSize / 2, graphSize / 2 + graphSize * 4 / 10);
         ctx.stroke();
         ctx.closePath();
 
@@ -117,16 +115,16 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
         ctx.beginPath();
         ctx.fillStyle = textColor;
         ctx.font = "bold 10pt sans-serif";
-        ctx.fillText("X", graphSize- arrowBoxSize, graphSize/2 - arrowBoxSize);
-        ctx.fillText("Y", graphSize/2 + arrowBoxSize, arrowBoxSize);
-        ctx.fillText("" + RMax, graphSize/2 + graphSize*4/10 - arrowBoxSize/2, graphSize/2 - arrowBoxSize);
-        ctx.fillText("" + RMax/2, graphSize/2 + graphSize*2/10 - arrowBoxSize/2, graphSize/2 - arrowBoxSize);
-        ctx.fillText("-" + RMax/2, graphSize/2 - graphSize*2/10 - arrowBoxSize/2, graphSize/2 - arrowBoxSize);
-        ctx.fillText("-" + RMax, graphSize/2 - graphSize*4/10 - arrowBoxSize/2, graphSize/2 - arrowBoxSize);
-        ctx.fillText("-" + RMax, graphSize/2 + arrowBoxSize, graphSize/2 + graphSize*4/10);
-        ctx.fillText("-" + RMax/2, graphSize/2 + arrowBoxSize, graphSize/2 + graphSize*2/10);
-        ctx.fillText("" + RMax/2, graphSize/2 + arrowBoxSize, graphSize/2 - graphSize*2/10);
-        ctx.fillText("" + RMax, graphSize/2 + arrowBoxSize, graphSize/2 - graphSize*4/10);
+        ctx.fillText("X", graphSize - arrowBoxSize, graphSize / 2 - arrowBoxSize);
+        ctx.fillText("Y", graphSize / 2 + arrowBoxSize, arrowBoxSize);
+        ctx.fillText("" + RMax, graphSize / 2 + graphSize * 4 / 10 - arrowBoxSize / 2, graphSize / 2 - arrowBoxSize);
+        ctx.fillText("" + RMax / 2, graphSize / 2 + graphSize * 2 / 10 - arrowBoxSize / 2, graphSize / 2 - arrowBoxSize);
+        ctx.fillText("-" + RMax / 2, graphSize / 2 - graphSize * 2 / 10 - arrowBoxSize / 2, graphSize / 2 - arrowBoxSize);
+        ctx.fillText("-" + RMax, graphSize / 2 - graphSize * 4 / 10 - arrowBoxSize / 2, graphSize / 2 - arrowBoxSize);
+        ctx.fillText("-" + RMax, graphSize / 2 + arrowBoxSize, graphSize / 2 + graphSize * 4 / 10);
+        ctx.fillText("-" + RMax / 2, graphSize / 2 + arrowBoxSize, graphSize / 2 + graphSize * 2 / 10);
+        ctx.fillText("" + RMax / 2, graphSize / 2 + arrowBoxSize, graphSize / 2 - graphSize * 2 / 10);
+        ctx.fillText("" + RMax, graphSize / 2 + arrowBoxSize, graphSize / 2 - graphSize * 4 / 10);
         ctx.closePath();
 
         drawPoints(ctx);
@@ -143,8 +141,8 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
         }
 
         graph.onclick = (e) => {
-            const x =(e.offsetX - graphSize/2) / graphSize / 4 * 10 * RMax;
-            const y = (-e.offsetY + graphSize/2) / graphSize / 4 * 10 * RMax
+            const x = (e.offsetX - graphSize / 2) / graphSize / 4 * 10 * RMax;
+            const y = (-e.offsetY + graphSize / 2) / graphSize / 4 * 10 * RMax
             addPoint(R, x.toFixed(5), y.toFixed(5));
             renderCanvasComponent(ctx);
         }
@@ -155,11 +153,11 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
     }
 
     const drawFigures = (ctx, R) => {
-        ctx.translate(graphSize/2, graphSize/2);
-        drawRectangle(ctx, -R/2, 0, 0, -R)
-        drawTriangle(ctx, 0, -R/2, R/2, 0)
+        ctx.translate(graphSize / 2, graphSize / 2);
+        drawRectangle(ctx, -R / 2, 0, 0, -R)
+        drawTriangle(ctx, 0, -R / 2, R / 2, 0)
         drawCircle(ctx, R, 4);
-        ctx.translate(-graphSize/2, -graphSize/2);
+        ctx.translate(-graphSize / 2, -graphSize / 2);
     }
 
     const drawRectangle = (ctx, x1, y1, x2, y2) => {
@@ -167,13 +165,13 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
 
         // (x1,y1) - begin, (x2,y2) - sizes
         if (x1 > x2)
-            [x1,x2] = [x2,x1];
+            [x1, x2] = [x2, x1];
         if (y1 > y2)
             [y1, y2] = [y2, y1];
 
-        [x2, y2] = [Math.abs(x1-x2), Math.abs(y1-y2)];
+        [x2, y2] = [Math.abs(x1 - x2), Math.abs(y1 - y2)];
 
-        ctx.fillRect(x1* graphSize*4/10/RMax, -y1 * graphSize*4/10/RMax, x2 * graphSize*4/10/RMax, -y2 * graphSize*4/10/RMax);
+        ctx.fillRect(x1 * graphSize * 4 / 10 / RMax, -y1 * graphSize * 4 / 10 / RMax, x2 * graphSize * 4 / 10 / RMax, -y2 * graphSize * 4 / 10 / RMax);
 
     }
 
@@ -182,7 +180,7 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.fillStyle = figColor;
-        ctx.arc(0, 0, radius * graphSize*4/10/RMax, Math.PI * (part - 1) / 2, Math.PI * (part) / 2)
+        ctx.arc(0, 0, radius * graphSize * 4 / 10 / RMax, Math.PI * (part - 1) / 2, Math.PI * (part) / 2)
         ctx.fill();
         ctx.closePath();
     }
@@ -191,29 +189,29 @@ export const MyCanvas = ({props, points, R, addPoint}) => {
         ctx.beginPath();
         ctx.fillStyle = figColor;
         ctx.moveTo(0, 0);
-        ctx.lineTo(x1 * graphSize*4/10/RMax, -y1 * graphSize*4/10/RMax);
-        ctx.lineTo(x2 * graphSize*4/10/RMax, -y2 * graphSize*4/10/RMax);
+        ctx.lineTo(x1 * graphSize * 4 / 10 / RMax, -y1 * graphSize * 4 / 10 / RMax);
+        ctx.lineTo(x2 * graphSize * 4 / 10 / RMax, -y2 * graphSize * 4 / 10 / RMax);
         ctx.lineTo(0, 0);
         ctx.fill();
         ctx.closePath();
     }
 
     const drawPoints = (ctx) => {
-        ctx.translate(graphSize/2, graphSize/2);
+        ctx.translate(graphSize / 2, graphSize / 2);
         points.forEach((point) => {
-            const x = (point.x * graphSize*4/10/RMax);
-            const y = (-point.y * graphSize*4/10/RMax);
+            const x = (point.x * graphSize * 4 / 10 / RMax);
+            const y = (-point.y * graphSize * 4 / 10 / RMax);
             ctx.beginPath();
             if (point.hit) {
                 ctx.fillStyle = dotsColorHit;
             } else {
                 ctx.fillStyle = dotsColor;
             }
-            ctx.arc(x, y, graphSize/150, 0, Math.PI * 2);
+            ctx.arc(x, y, graphSize / 150, 0, Math.PI * 2);
             ctx.fill();
             ctx.closePath();
         });
-        ctx.translate(-graphSize/2, -graphSize/2);
+        ctx.translate(-graphSize / 2, -graphSize / 2);
     }
 
     return (
