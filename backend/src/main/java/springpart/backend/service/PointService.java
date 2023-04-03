@@ -3,7 +3,7 @@ package springpart.backend.service;
 import org.springframework.stereotype.Service;
 import springpart.backend.entity.PointEntity;
 import springpart.backend.entity.UserEntity;
-import springpart.backend.model.Point;
+import springpart.backend.DTO.Point;
 import springpart.backend.repository.PointRepo;
 
 import java.time.LocalDateTime;

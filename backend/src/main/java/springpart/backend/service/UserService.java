@@ -8,7 +8,7 @@ import springpart.backend.exception.BadRegistrationDataException;
 import springpart.backend.exception.PasswordIncorrectException;
 import springpart.backend.exception.UserDoesNotExistException;
 import springpart.backend.exception.UserNotFoundException;
-import springpart.backend.model.User;
+import springpart.backend.DTO.User;
 import springpart.backend.repository.UserRepo;
 
 import java.util.Optional;

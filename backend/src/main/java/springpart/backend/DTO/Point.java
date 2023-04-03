@@ -1,4 +1,4 @@
-package springpart.backend.model;
+package springpart.backend.DTO;
 
 import springpart.backend.entity.PointEntity;
 
